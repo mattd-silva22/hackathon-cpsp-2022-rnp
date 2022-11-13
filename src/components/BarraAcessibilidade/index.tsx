@@ -38,7 +38,13 @@ export default function BarraAcessibilidade() {
           >
             <Eye size={24} />
             <span>Modo daltônico</span>
-            <CaretDown size={24} />
+            <CaretDown
+              size={24}
+              style={{
+                ...(dropdown && { transform: "rotate(-180deg)" }),
+                transition: "all 0.2s",
+              }}
+            />
           </button>
 
           <div className={`dropdown-content ${!dropdown ? "disable" : ""}`}>

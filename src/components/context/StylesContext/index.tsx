@@ -40,7 +40,7 @@ export function StylesProvider(props: IStylesProviderProps) {
       danger: "#e23645",
       success: "#008F66",
       warning: "#EDB507",
-      info: "#0061EA",
+      info: "#1a3c8a",
       black: "#2f2e33",
     },
 
@@ -55,35 +55,14 @@ export function StylesProvider(props: IStylesProviderProps) {
       danger: "#e23645",
       success: "#008F66",
       warning: "#EDB507",
-      info: "#0061EA",
+      info: "#1a3c8a",
       black: "#ffffff",
     },
 
     fontSize: fontSize + "%" || "1.6rem",
   };
 
-  const constractTheme = highContrast ? highTheme : theme;
-
-  const currentTheme = useMemo(() => {
-    return constractTheme;
-    if (colorBlind === "none") {
-      return constractTheme;
-    } else {
-      constractTheme.colors.info = blinder[colorBlind](
-        constractTheme.colors.info
-      );
-      constractTheme.colors.danger = blinder[colorBlind](
-        constractTheme.colors.danger
-      );
-      constractTheme.colors.warning = blinder[colorBlind](
-        constractTheme.colors.warning
-      );
-      constractTheme.colors.success = blinder[colorBlind](
-        constractTheme.colors.success
-      );
-      return constractTheme;
-    }
-  }, [constractTheme, colorBlind]);
+  const currentTheme = highContrast ? highTheme : theme;
 
   return (
     <StylesContext.Provider

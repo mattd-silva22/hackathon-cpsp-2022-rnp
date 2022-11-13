@@ -59,7 +59,7 @@ export function StylesProvider(props: IStylesProviderProps) {
     >
       <ThemeProvider theme={currentTheme}>
         <GlobalStyled
-          fontSize={currentTheme.fontSize}
+          fontSize={fontSize * 0.675 + "%"}
           textColor={currentTheme.colors.black}
         />
         {props.children}

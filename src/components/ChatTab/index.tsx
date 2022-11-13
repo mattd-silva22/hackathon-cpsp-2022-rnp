@@ -181,8 +181,11 @@ const messages = [
   },
 ];
 
+type tabs = "Mensagens" | "Participantes";
+
 const ChatTab = () => {
-  const [title, setTitle] = useState("Mensagens na chamada");
+  const [title, setTitle] = useState<tabs>("Mensagens");
+
   return (
     <Container>
       <div className="chat-tab_header">{title}</div>
@@ -197,9 +200,13 @@ const ChatTab = () => {
         ))}
       </div>
       <div className="navbar-aside-area">
-        <button>Participantes</button>
+        <button className={title === "Mensagens" ? "active" : undefined}>
+          Participantes
+        </button>
 
-        <button>Mensagens</button>
+        <button className={title === "Participantes" ? "active" : undefined}>
+          Mensagens
+        </button>
 
         <button>Notas de Aulas</button>
       </div>
@@ -266,6 +273,17 @@ export const Container = styled.div`
       height: 100%;
       background-color: ${({ theme }) => theme.colors.base150};
       padding: 16px;
+
+      font-weight: 700;
+      font-size: 1.6rem;
+      line-height: 24px;
+
+      color: ${({ theme }) => theme.colors.black};
+
+      &.active {
+        color: ${({ theme }) => theme.colors.base100};
+        background-color: ${({ theme }) => theme.colors.info};
+      }
     }
   }
 `;

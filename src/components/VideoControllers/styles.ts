@@ -2,15 +2,15 @@ import styled from "styled-components";
 
 export const VideoControllerContainer = styled.nav`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  gap: 160px;
+  gap: 16px;
 
   .conference-menu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 16px;
     flex-wrap: wrap;
   }

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import styled from "styled-components";
 import * as Avatar from "@radix-ui/react-avatar";
 import { useSpeechSynthesis } from "react-speech-kit";
+import useSound from "use-sound";
+
+// import plim from "./plim.mp3";
 
 interface MessageProps {
   text: string;
@@ -11,6 +14,15 @@ interface MessageProps {
 
 const Message: React.FC<MessageProps> = ({ text, imgUrl, userName }) => {
   const { speak } = useSpeechSynthesis();
+  const [play] = useSound("/plim.mp3");
+
+  const playText = useCallback(() => {
+    play();
+
+    setTimeout(() => {
+      speak({ text: userName + "disse: - " + text });
+    }, 500);
+  }, [play, speak, text, userName]);
 
   return (
     <Container>
@@ -21,10 +33,7 @@ const Message: React.FC<MessageProps> = ({ text, imgUrl, userName }) => {
         </Avatar.Fallback>
       </Avatar.Root>
 
-      <button
-        className="message-text"
-        onClick={() => speak({ text: userName + "disse: - " + text })}
-      >
+      <button className="message-text" onClick={() => playText()}>
         {text}
       </button>
     </Container>
@@ -56,5 +65,12 @@ export const Container = styled.div`
     border-radius: 8px;
 
     font-size: 1.2rem;
+
+    cursor: pointer;
+    border: 1px solid ${({ theme }) => theme.colors.base150};
+
+    &:hover {
+      border: 1px solid ${({ theme }) => theme.colors.info};
+    }
   }
 `;

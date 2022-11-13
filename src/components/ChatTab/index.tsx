@@ -25,6 +25,7 @@ const ChatTab = () => {
       }
     }, 15000);
   }, [arrMessages]);
+
   useEffect(() => {
     addDelayMessage();
   }, [addDelayMessage]);

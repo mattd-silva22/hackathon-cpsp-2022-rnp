@@ -18,9 +18,6 @@ export default function ConferencePage() {
             <ChatTab />
           </section>
         </div>
-        
-
-        
       </ConferencePageContent>
     </ConferencePageContainer>
   );
@@ -41,11 +38,11 @@ const ConferencePageContent = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 16px;
-  width: 95%;
+  width: 100%;
 
   border: 1px solid blue;
-  max-width: 100%;
-  .page-content{
+
+  .page-content {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -55,6 +52,6 @@ const ConferencePageContent = styled.div`
   .conference-area {
     display: flex;
     align-items: center;
-    justify-content:center ;
+    justify-content: center;
   }
 `;

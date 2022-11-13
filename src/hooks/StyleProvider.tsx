@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ThemeProvider, ThemeProps } from "styled-components";
+import { GlobalStyled } from "../styles";
 import { useFontSize } from "./useFontSIze";
 
 // import { Container } from './styles';
@@ -23,7 +24,14 @@ const StyleProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
     fontSize: fontSize || "1.6rem",
   };
 
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return (
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyled fontSize={fontSize + "%"} />
+        {children}
+      </ThemeProvider>
+    </>
+  );
 };
 
 export default StyleProvider;

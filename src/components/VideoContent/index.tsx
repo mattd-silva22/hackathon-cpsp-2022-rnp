@@ -101,7 +101,7 @@ export const Container = styled.div`
     height: auto;
     border-radius: 24px;
     @media(max-width:1366px){
-      width: 70%;
+      width: 100%;
     }
   }
 `;

@@ -7,6 +7,13 @@ export const VideoControllerContainer = styled.nav`
   width: 100%;
   gap: 16px;
 
+
+  @media(max-width:1366px) {
+      & {
+        justify-content: center;
+      }
+    }
+
   .conference-menu {
     display: flex;
     align-items: center;

@@ -32,7 +32,5 @@ export const ConferencePageContent = styled.div`
     width: 100%;
     flex-direction: column;
     gap: 40px;
-
-    border: 1px solid red;
   }
 `;

@@ -21,9 +21,7 @@ export const BarraAcessibilidadeContainer = styled.nav`
     justify-content: flex-start;
     gap: 8px;
     flex-wrap: wrap;
-    
-
-    border: 1px solid red;
+  
   }
   .menu-li {
     display: flex;

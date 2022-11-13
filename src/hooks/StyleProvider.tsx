@@ -27,7 +27,7 @@ const StyleProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <GlobalStyled fontSize={fontSize + "%"} />
+        <GlobalStyled fontSize={(fontSize * 0.675) + "%"} />
         {children}
       </ThemeProvider>
     </>

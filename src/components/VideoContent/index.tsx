@@ -5,20 +5,20 @@ import { Plus } from "phosphor-react";
 const VideoContent: React.FC = () => {
   return (
     <Container>
-      <h1>Lorem ipsum dolor sit amet consectetur</h1>
+      <h1 className="room">Lorem ipsum dolor sit amet consectetur</h1>
 
       <div className="video-page_container">
         <div className="video-container_header">
           <span>
             <div className="recording-icon" />
-            <p>Recording 00:00:00</p>
+            <p className="recording-text">Recording 00:00:00</p>
           </span>
 
           <span className="invite-people">
             <div className="add-icon">
               <Plus size={24} color={"#ffffff"} />
             </div>
-            <p>Convidar pessoas</p>
+            <p className="invite-people-text">Convidar pessoas</p>
           </span>
         </div>
       </div>
@@ -44,7 +44,7 @@ export const Container = styled.div`
 
   h1 {
     font-weight: 700;
-    font-size: 34px;
+    font-size:  3.2rem;
     line-height: 52px;
 
     color: ${({ theme }) => theme.colors.black};
@@ -52,6 +52,13 @@ export const Container = styled.div`
 
   .video-page_container {
     width: 100%;
+  }
+
+  .recording-text{
+    font-size: 2.4rem;
+  }
+  .invite-people-text {
+    font-size: 2.4rem;
   }
 
   .video-container_header {

@@ -8,9 +8,12 @@ export const GlobalStyled = styled.createGlobalStyle<{ fontSize: string }>`
     padding: 0px;
     box-sizing: border-box;
     border: 0px;
+
+    transition: font-size .2s;
   }
 
   html {
     font-size: ${({ fontSize }) => fontSize};
+    font-family: "Open Sans";
   }
 `;

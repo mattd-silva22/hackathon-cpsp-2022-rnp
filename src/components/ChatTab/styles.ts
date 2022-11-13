@@ -1,21 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  position: sticky;
-  top: 32px;
+  
+  height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0px;
-
-  width: 100%;
-
   background: ${(props) => props.theme.colors.base100};
   border: 1px solid ${(props) => props.theme.colors.base200};
   border-radius: 8px;
-  overflow: hidden;
-  height: calc(100vh - 64px);
-  flex: 1;
+  
   .chat-tab_header {
     display: flex;
     flex-direction: column;
@@ -46,6 +41,7 @@ export const Container = styled.div`
     margin-top: 8px;
 
     overflow-y: scroll;
+    
   }
 
   .input-container {
@@ -94,6 +90,32 @@ export const Container = styled.div`
         color: #f4f4f5;
       }
     }
+  }
+
+  .content-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: sticky;
+    overflow: hidden;
+    width: 100%;
+    flex: 1;
+    top: 32px;
+    min-width: 450px;
+  }
+
+  .content-users {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: sticky;
+    overflow: hidden;
+    width: 100%;
+    flex: 1;
+    top: 32px;
+    min-width: 450px;
   }
 
   .navbar-aside-area {

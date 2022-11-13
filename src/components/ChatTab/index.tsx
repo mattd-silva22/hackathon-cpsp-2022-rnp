@@ -13,6 +13,18 @@ const ChatTab = () => {
     messages.filter((a, index) => index < 3) as typeof messages
   );
 
+  const [currentPage , setCurrentPage] = useState("msg")
+  function handleSwitchPage(page:String){
+    if(page === "msg") {
+      setCurrentPage("msg")
+      setTitle("Mensagens")
+    }
+
+    if(page === 'users') {
+      setCurrentPage('users')
+      setTitle("Participantes")
+    }
+  }
   const addDelayMessage = useCallback(() => {
     setTimeout(() => {
       const currentIndex = arrMessages.length;
@@ -33,36 +45,55 @@ const ChatTab = () => {
   return (
     <Container>
       <div className="chat-tab_header">{title}</div>
-      <div className="message-container">
-        {arrMessages.map((message, index) => (
-          <Message
-            key={message.user.id + index}
-            imgUrl={message.user.img}
-            text={message.text}
-            userName={message.user.name}
-          />
-        ))}
-      </div>
+      {currentPage === 'msg'? 
+      
+      
+      
+        <div className="content-msg">
+          <div className="message-container">
+            {arrMessages.map((message, index) => (
+              <Message
+                key={message.user.id + index}
+                imgUrl={message.user.img}
+                text={message.text}
+                userName={message.user.name}
+              />
+            ))}
+          </div>
 
-      <div className="input-container">
-        <input placeholder="Digite uma mensagem" />
-        <button>
-          <p>Enviar</p>
-          <PaperPlaneTilt size={20} color={"#fff"} />
-        </button>
+          <div className="input-container">
+            <input placeholder="Digite uma mensagem" />
+            <button>
+              <p>Enviar</p>
+              <PaperPlaneTilt size={20} color={"#fff"} />
+            </button>
+          </div>
+        </div>
+      
+      
+      : 
+      
+      
+      <div className="content-users">
+        oi
       </div>
+      
+      
+      }
+      
+      
 
       <div className="navbar-aside-area">
         <button
           className={title === "Mensagens" ? "active" : undefined}
-          onClick={() => setTitle("Mensagens")}
+          onClick={() => handleSwitchPage('msg')}
         >
           Mensagens
         </button>
 
         <button
           className={title === "Participantes" ? "active" : undefined}
-          onClick={() => setTitle("Participantes")}
+          onClick={() => handleSwitchPage('users')}
         >
           Participantes
         </button>

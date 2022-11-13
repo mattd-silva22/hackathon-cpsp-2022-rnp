@@ -50,9 +50,8 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     padding: 12px;
-
     width: 100%;
-
+    text-align: left;
     background: ${({ theme }) => theme.colors.base150};
     border-radius: 8px;
 

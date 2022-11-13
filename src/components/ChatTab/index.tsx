@@ -14,7 +14,39 @@ const messages = [
   {
     user: {
       id: 2,
+      name: "Maria",
+      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
+    },
+    text: "Volto já",
+  },
+  {
+    user: {
+      id: 1,
       name: "Ana",
+      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
+    },
+    text: "Professor, poderia enviar o arquivo pelo email da turma?",
+  },
+  {
+    user: {
+      id: 1,
+      name: "Guto Marcelo",
+      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
+    },
+    text: "Interessante!",
+  },
+  {
+    user: {
+      id: 1,
+      name: "Ana",
+      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
+    },
+    text: "Otima analise",
+  },
+  {
+    user: {
+      id: 1,
+      name: "Carlos",
       img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
     },
     text: "Professor, pode repetir o último slide?",
@@ -27,158 +59,7 @@ const messages = [
     },
     text: "Professor, pode repetir o último slide?",
   },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
-  {
-    user: {
-      id: 1,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
-    },
-    text: "Professor, pode repetir o último slide?",
-  },
+ 
 ];
 
 type tabs = "Mensagens" | "Participantes";
@@ -256,8 +137,11 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 12px;
+    align-items: flex-start;
+    margin-top: 8px;
+    
 
-    justify-content: flex-end;
+    
     overflow-y: scroll;
   }
 

@@ -2,24 +2,35 @@ import {
   CornersOut,
   HandPalm,
   Microphone,
+  MicrophoneSlash,
   Monitor,
   PhoneSlash,
   TextAa,
   VideoCamera,
 } from "phosphor-react";
-import React from "react";
+import React, { useState } from "react";
 import { useStyles } from "../../hooks/useStyles";
 import { VideoControllerContainer } from "./styles";
 
 export default function VideoController() {
   const { highContrast } = useStyles();
+  const [isMicActive,setIsMicAcitve] = useState(false)
 
+  function handleActiveMicBtnClick() {
+    setIsMicAcitve(!isMicActive)
+  }
   return (
     <VideoControllerContainer>
       <div className="conference-menu">
-        <div className="menu-item">
-          <p className="icon">
-            <Microphone size={24} color={highContrast ? "#fff" : "#000"} />
+        <div className={`menu-item`} onClick={handleActiveMicBtnClick}>
+          <p className={` icon ${isMicActive? "mic-on" : "mic-off"}`}>
+            {isMicActive?  
+              <Microphone size={24} color={highContrast ? "#fff" : "#000"} /> 
+              : 
+              <MicrophoneSlash size={24} color={ highContrast || isMicActive  ? "#fff" : "#000"}/>
+            }
+
+            
           </p>
 
           <p>Microfone</p>

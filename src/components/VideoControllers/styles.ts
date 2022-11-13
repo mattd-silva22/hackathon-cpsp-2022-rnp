@@ -60,6 +60,9 @@ export const VideoControllerContainer = styled.nav`
       }
     }
   }
+  .mic-on {
+    background-color: ${({ theme }) => theme.colors. success};
+  }
 
   .resp {
     display: none;

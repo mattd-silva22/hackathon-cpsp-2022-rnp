@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useFontSize } from "../../hooks/useFontSIze";
 import { BarraAcessibilidadeContainer } from "./styles";
 import { useStyles } from "../../hooks/useStyles";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
 export default function BarraAcessibilidade() {
   const { fontSize, setFontSize } = useFontSize();
@@ -28,16 +29,19 @@ export default function BarraAcessibilidade() {
         height={48}
       />
 
-      <ul className="menu-ul">
-        <li className="menu-li">
-          <button className="menu-btn">
+      <div className="menu-ul">
+        <div className="menu-li">
+          <button
+            className="menu-btn"
+            aria-label="Selecione seu tipo de daltonismo"
+          >
             <Eye size={32} />
             <span>Modo daltônico</span>
             <CaretDown size={32} />
           </button>
-        </li>
+        </div>
 
-        <li className="menu-li">
+        <div className="menu-li">
           <button
             className="menu-btn"
             onClick={() => setHighContrast((state) => !state)}
@@ -45,9 +49,9 @@ export default function BarraAcessibilidade() {
             <CircleHalf size={32} weight={"fill"} />
             <span>Alto contraste</span>
           </button>
-        </li>
+        </div>
 
-        <li className="menu-li">
+        <div className="menu-li">
           <nav className="controle-fonte">
             <button
               className="menu-btn"
@@ -56,10 +60,10 @@ export default function BarraAcessibilidade() {
               }}
             >
               <Plus size={32} />
-              <span>Aumentar letras (10%)</span>
+              <span>Aumentar letras</span>
             </button>
 
-            <span>{fontSize}%</span>
+            {/* <span>{fontSize}%</span> */}
 
             <button
               className="menu-btn"
@@ -68,11 +72,11 @@ export default function BarraAcessibilidade() {
               }}
             >
               <Minus size={32} />
-              <span>Diminuir Letras (10%)</span>
+              <span>Diminuir letras</span>
             </button>
           </nav>
-        </li>
-      </ul>
+        </div>
+      </div>
     </BarraAcessibilidadeContainer>
   );
 }

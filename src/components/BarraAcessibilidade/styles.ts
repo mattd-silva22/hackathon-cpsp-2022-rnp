@@ -3,19 +3,18 @@ import styled from "styled-components";
 export const BarraAcessibilidadeContainer = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 8px;
-  font-size: 1.6rem;
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   color: ${({ theme }) => theme.colors.black};
-  font-size: 1rem;
+  flex-wrap: wrap;
+  gap: 16px;
 
   .menu-ul {
     display: flex;
     align-items: center;
-    justify-content: center;
-    list-style: none;
-    gap: 12px;
+    justify-content: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
   }
   .menu-li {
     display: flex;
@@ -38,7 +37,7 @@ export const BarraAcessibilidadeContainer = styled.nav`
     gap: 8px;
     background-color: ${(props) => props.theme.colors.base100};
 
-    border: 1px solid #e2e1e6;
+    border: 1px solid ${(props) => props.theme.colors.base200};
     border-radius: 8px;
     font-family: "Open Sans";
     font-style: normal;

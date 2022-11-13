@@ -7,20 +7,18 @@ const VideoContent: React.FC = () => {
     <Container>
       <h1 className="room">Lorem ipsum dolor sit amet consectetur</h1>
 
-      <div className="video-page_container">
-        <div className="video-container_header">
-          <span>
-            <div className="recording-icon" />
-            <p className="recording-text">Recording 00:00:00</p>
-          </span>
+      <div className="video-container_header">
+        <span>
+          <div className="recording-icon" />
+          <p className="recording-text">Recording 00:00:00</p>
+        </span>
 
-          <span className="invite-people">
-            <div className="add-icon">
-              <Plus size={24} color={"#ffffff"} />
-            </div>
-            <p className="invite-people-text">Convidar pessoas</p>
-          </span>
-        </div>
+        <span className="invite-people">
+          <div className="add-icon">
+            <Plus size={24} color={"#ffffff"} />
+          </div>
+          <p className="invite-people-text">Convidar pessoas</p>
+        </span>
       </div>
 
       <video controls>
@@ -42,14 +40,10 @@ export const Container = styled.div`
 
   h1 {
     font-weight: 700;
-    font-size: 3.2rem;
-    line-height: 52px;
+    font-size: 2.4rem;
+    line-height: 28px;
 
     color: ${({ theme }) => theme.colors.black};
-  }
-
-  .video-page_container {
-    width: 100%;
   }
 
   .recording-text {
@@ -60,8 +54,11 @@ export const Container = styled.div`
   }
 
   .video-container_header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
 
     span {
       .recording-icon {

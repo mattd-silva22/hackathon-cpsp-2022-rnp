@@ -12,15 +12,16 @@ export const ConferencePageContainer = styled.div`
 export const ConferencePageContent = styled.div`
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
   gap: 16px;
   width: 100%;
+  max-width: 100%;
 
   .conference-area {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
-    gap: 32px;
+    gap: 16px;
+    flex: 1;
   }
 `;

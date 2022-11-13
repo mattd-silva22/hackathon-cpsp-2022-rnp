@@ -37,7 +37,8 @@ export const Container = styled.div`
   display: flex;
   gap: 8px;
 
-  .AvatarImage {
+  .AvatarImage,
+  .AvatarFallback {
     width: 45px;
     height: 45px;
     border-radius: 100%;

@@ -9,13 +9,18 @@ export default function ConferencePage() {
   return (
     <ConferencePageContainer>
       <ConferencePageContent>
-        <main className="conference-area">
-          <BarraAcessibilidade />
+        <BarraAcessibilidade />
+        <div className="page-content">
+          <main className="conference-area">
+            <VideoContent />
+          </main>
+          <section className="chat">
+            <ChatTab />
+          </section>
+        </div>
+        
 
-          <VideoContent />
-        </main>
-
-        <ChatTab />
+        
       </ConferencePageContent>
     </ConferencePageContainer>
   );
@@ -34,11 +39,22 @@ const ConferencePageContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   gap: 16px;
+  width: 95%;
 
   border: 1px solid blue;
   max-width: 100%;
+  .page-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
 
   .conference-area {
+    display: flex;
+    align-items: center;
+    justify-content:center ;
   }
 `;

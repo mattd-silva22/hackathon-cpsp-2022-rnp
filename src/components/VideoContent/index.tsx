@@ -40,6 +40,8 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 16px;
 
+  border: 1px solid green;
+
   h1 {
     font-weight: 700;
     font-size: 34px;

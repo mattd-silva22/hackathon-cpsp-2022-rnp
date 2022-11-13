@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useFontSize } from '../../hooks/useFontSIze';
 
 interface IBarraAcessibilidadeContainerProps {
-    currentFontSize: number
+    fontSize: string
 }
 
 const BarraAcessibilidadeContainer = styled.nav<IBarraAcessibilidadeContainerProps>`
@@ -16,7 +16,7 @@ const BarraAcessibilidadeContainer = styled.nav<IBarraAcessibilidadeContainerPro
     width: 100%;
     border: 1px solid red;
     color: ${({ theme }) => theme.colors.black};
-    font-size:${({theme})=> theme.getFontSize((props: { currentFontSize: any; }) => props.currentFontSize) as number} ;
+    font-size: ${(props)=> props.fontSize};
     
 
      
@@ -57,6 +57,7 @@ const BarraAcessibilidadeContainer = styled.nav<IBarraAcessibilidadeContainerPro
         font-style: normal;
         font-weight: 600;
         line-height: 32px;
+        font-size: ${(props)=> props.fontSize};
 
         &:hover {
             cursor: pointer;
@@ -67,20 +68,22 @@ const BarraAcessibilidadeContainer = styled.nav<IBarraAcessibilidadeContainerPro
 
 export default function BarraAcessibilidade() {
 
-  const {getFontSize , setFontSize}  = useFontSize()
-
+  const {fontSize , setFontSize}  = useFontSize()
+  const [currentFontSize , setCurrentFontSize] = useState<number>(100)
   function handleChangeFontSize(currentFontSize:number,operation:string){
     if (operation === "-" && currentFontSize > 100) {
         setFontSize(currentFontSize - 10)
+        setCurrentFontSize(currentFontSize - 10)
     } 
 
     if(operation === "+" && currentFontSize < 150) {
         setFontSize(currentFontSize + 10)
+        setCurrentFontSize(currentFontSize + 10)
     } 
   }
 
   return (
-    <BarraAcessibilidadeContainer currentFontSize={getFontSize()}>
+    <BarraAcessibilidadeContainer fontSize={fontSize}>
         <Image src="/logo.png" alt="logo web conferencia" width={257} height={48}
         
         />

@@ -63,8 +63,6 @@ export default function BarraAcessibilidade() {
               <span>Aumentar letras</span>
             </button>
 
-            {/* <span>{fontSize}%</span> */}
-
             <button
               className="menu-btn"
               onClick={() => {

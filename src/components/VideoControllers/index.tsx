@@ -8,15 +8,18 @@ import {
   VideoCamera,
 } from "phosphor-react";
 import React from "react";
+import { useStyles } from "../../hooks/useStyles";
 import { VideoControllerContainer } from "./styles";
 
 export default function VideoController() {
+  const { highContrast } = useStyles();
+
   return (
     <VideoControllerContainer>
       <div className="conference-menu">
         <div className="menu-item">
           <p className="icon">
-            <Microphone size={24} color="#000" />
+            <Microphone size={24} color={highContrast ? "#fff" : "#000"} />
           </p>
 
           <p>Microfone</p>
@@ -24,7 +27,7 @@ export default function VideoController() {
 
         <div className="menu-item">
           <p className="icon">
-            <VideoCamera size={24} color="#000" />
+            <VideoCamera size={24} color={highContrast ? "#fff" : "#000"} />
           </p>
 
           <p>Câmera</p>
@@ -32,7 +35,7 @@ export default function VideoController() {
 
         <div className="menu-item">
           <p className="icon">
-            <TextAa size={24} color="#000" />
+            <TextAa size={24} color={highContrast ? "#fff" : "#000"} />
           </p>
 
           <p>Legendas</p>
@@ -40,7 +43,7 @@ export default function VideoController() {
 
         <div className="menu-item">
           <p className="icon">
-            <CornersOut size={24} color="#000" />
+            <CornersOut size={24} color={highContrast ? "#fff" : "#000"} />
           </p>
 
           <p>Tela Cheia</p>
@@ -48,7 +51,11 @@ export default function VideoController() {
 
         <div className="menu-item">
           <p className="icon">
-            <Monitor size={24} color="#000" weight="bold" />
+            <Monitor
+              size={24}
+              color={highContrast ? "#fff" : "#000"}
+              weight="bold"
+            />
           </p>
 
           <p>Apresentar</p>
@@ -56,7 +63,7 @@ export default function VideoController() {
 
         <div className="menu-item">
           <p className="icon">
-            <HandPalm size={24} color="#000" />
+            <HandPalm size={24} color={highContrast ? "#fff" : "#000"} />
           </p>
 
           <p>Levantar a mão</p>

@@ -196,15 +196,13 @@ const ChatTab = () => {
           />
         ))}
       </div>
-      <nav className="navbar-aside-area">
-        <ul>
-          <li>Participantes</li>
+      <div className="navbar-aside-area">
+        <button>Participantes</button>
 
-          <li>Mensagens</li>
+        <button>Mensagens</button>
 
-          <li>Notas de Aulas</li>
-        </ul>
-      </nav>
+        <button>Notas de Aulas</button>
+      </div>
     </Container>
   );
 };
@@ -247,7 +245,7 @@ export const Container = styled.div`
   .message-container {
     width: 100%;
     padding: 0 8px;
-    padding-bottom: 8px;
+    padding-bottom: 16px;
     max-height: 100%;
     height: 100%;
     display: flex;
@@ -259,19 +257,15 @@ export const Container = styled.div`
   }
 
   .navbar-aside-area {
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
 
-      list-style: none;
-    }
-
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px 32px;
+    button {
+      width: 100%;
+      height: 100%;
+      background-color: ${({ theme }) => theme.colors.base150};
+      padding: 16px;
     }
   }
 `;

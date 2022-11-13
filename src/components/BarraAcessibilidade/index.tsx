@@ -48,37 +48,87 @@ export default function BarraAcessibilidade() {
           </button>
 
           <div className={`dropdown-content ${!dropdown ? "disable" : ""}`}>
-            <button onClick={() => setColorBlind("deuteranomaly")}>
+            <button
+              onClick={() => {
+                setColorBlind("deuteranomaly");
+                setDropdown(false);
+              }}
+            >
               Deuteranomalia
             </button>
-            <button onClick={() => setColorBlind("deuteranopia")}>
+            <button
+              onClick={() => {
+                setColorBlind("deuteranopia");
+                setDropdown(false);
+              }}
+            >
               Deuteranopia
             </button>
-            <button onClick={() => setColorBlind("protanomaly")}>
+            <button
+              onClick={() => {
+                setColorBlind("protanomaly");
+                setDropdown(false);
+              }}
+            >
               Protanomalia
             </button>
-            <button onClick={() => setColorBlind("protanopia")}>
+            <button
+              onClick={() => {
+                setColorBlind("protanopia");
+                setDropdown(false);
+              }}
+            >
               Protanopia
             </button>
-            <button onClick={() => setColorBlind("deuteranomaly")}>
+            <button
+              onClick={() => {
+                setColorBlind("deuteranomaly");
+                setDropdown(false);
+              }}
+            >
               Deuteranomalia
             </button>
-            <button onClick={() => setColorBlind("deuteranopia")}>
+            <button
+              onClick={() => {
+                setColorBlind("deuteranopia");
+                setDropdown(false);
+              }}
+            >
               Deuteranopia
             </button>
-            <button onClick={() => setColorBlind("Achromatomaly")}>
+            <button
+              onClick={() => {
+                setColorBlind("Achromatomaly");
+                setDropdown(false);
+              }}
+            >
               Acrotomalia
             </button>
-            <button onClick={() => setColorBlind("Achromatopsia")}>
+            <button
+              onClick={() => {
+                setColorBlind("Achromatopsia");
+                setDropdown(false);
+              }}
+            >
               Acromatopsia
             </button>
-            <button onClick={() => setColorBlind("none")}>Nenhum</button>
+            <button
+              onClick={() => {
+                setColorBlind("none");
+                setDropdown(false);
+              }}
+            >
+              Nenhum
+            </button>
           </div>
         </div>
 
         <button
           className="menu-btn"
-          onClick={() => setHighContrast((state) => !state)}
+          onClick={() => {
+            setHighContrast((state) => !state);
+            setDropdown(false);
+          }}
         >
           <CircleHalf size={24} weight={"fill"} />
           <span>Alto contraste</span>
@@ -88,6 +138,7 @@ export default function BarraAcessibilidade() {
           className="menu-btn"
           onClick={() => {
             handleChangeFontSize(fontSize, "+");
+            setDropdown(false);
           }}
         >
           <Plus size={24} />

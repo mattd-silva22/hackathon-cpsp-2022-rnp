@@ -1,5 +1,5 @@
 import { PaperPlaneTilt } from "phosphor-react";
-import React, { useState } from "react";
+import React, { memo, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
 import Message from "../Message";
 import { messages } from "./mock-messages";
@@ -9,12 +9,31 @@ type tabs = "Mensagens" | "Participantes";
 
 const ChatTab = () => {
   const [title, setTitle] = useState<tabs>("Mensagens");
+  const [arrMessages, setArrMessages] = useState(
+    messages.filter((a, index) => index < 3) as typeof messages
+  );
+
+  const addDelayMessage = useCallback(() => {
+    setTimeout(() => {
+      const currentIndex = arrMessages.length;
+
+      if (currentIndex < messages.length - 1) {
+        const newMessage = messages[currentIndex];
+        const newArray = arrMessages.concat(newMessage);
+        setArrMessages(newArray);
+        addDelayMessage();
+      }
+    }, 15000);
+  }, [arrMessages]);
+  useEffect(() => {
+    addDelayMessage();
+  }, [addDelayMessage]);
 
   return (
     <Container>
       <div className="chat-tab_header">{title}</div>
       <div className="message-container">
-        {messages.map((message, index) => (
+        {arrMessages.map((message, index) => (
           <Message
             key={message.user.id + index}
             imgUrl={message.user.img}
@@ -51,4 +70,4 @@ const ChatTab = () => {
   );
 };
 
-export default ChatTab;
+export default memo(ChatTab);

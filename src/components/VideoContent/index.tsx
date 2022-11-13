@@ -7,7 +7,7 @@ const VideoContent: React.FC = () => {
     <Container>
       <h1 className="room">Lorem ipsum dolor sit amet consectetur</h1>
 
-      <div className="video-container_header">
+      {/* <div className="video-container_header">
         <span>
           <div className="recording-icon" />
           <p className="recording-text">Recording 00:00:00</p>
@@ -19,7 +19,7 @@ const VideoContent: React.FC = () => {
           </div>
           <p className="invite-people-text">Convidar pessoas</p>
         </span>
-      </div>
+      </div> */}
 
       <video controls>
         <source src="videoplayback.mp4" type="video/mp4" />
@@ -41,16 +41,16 @@ export const Container = styled.div`
   h1 {
     font-weight: 700;
     font-size: 2.4rem;
-    line-height: 28px;
+    line-height: 2.8rem;
 
     color: ${({ theme }) => theme.colors.black};
   }
 
   .recording-text {
-    font-size: 2.4rem;
+    font-size: 2.0rem;
   }
   .invite-people-text {
-    font-size: 2.4rem;
+    font-size: 2.0rem;
   }
 
   .video-container_header {
@@ -100,5 +100,8 @@ export const Container = styled.div`
     width: 100%;
     height: auto;
     border-radius: 24px;
+    @media(max-width:1366px){
+      width: 70%;
+    }
   }
 `;

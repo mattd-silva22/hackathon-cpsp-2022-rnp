@@ -22,6 +22,17 @@ export const ConferencePageContent = styled.div`
     justify-content: space-between;
     flex-direction: column;
     gap: 16px;
-    flex: 1;
+    width: 70%;
+  }
+
+  .video-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+
+    border: 1px solid red;
   }
 `;

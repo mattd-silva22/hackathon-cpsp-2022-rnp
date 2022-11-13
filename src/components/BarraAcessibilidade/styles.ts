@@ -9,12 +9,21 @@ export const BarraAcessibilidadeContainer = styled.nav`
   flex-wrap: wrap;
   gap: 16px;
 
+  @media(max-width:1366px) {
+    &{
+      flex-direction: column;
+    }
+  }
+
   .menu-ul {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
     flex-wrap: wrap;
+    
+
+    border: 1px solid red;
   }
   .menu-li {
     display: flex;
@@ -22,12 +31,7 @@ export const BarraAcessibilidadeContainer = styled.nav`
     justify-content: center;
   }
 
-  .controle-fonte {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-  }
+ 
 
   .menu-btn {
     padding: 8px 16px;
@@ -42,8 +46,15 @@ export const BarraAcessibilidadeContainer = styled.nav`
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 600;
-    line-height: 32px;
-    font-size: 1rem;
+    line-height: 3.2rem;
+    font-size: 1.4rem;
+
+    @media(max-width:1366px) {
+      &{
+        font-size: 1rem;
+        padding: 4px 8px;
+      }
+    }
 
     &:hover {
       cursor: pointer;

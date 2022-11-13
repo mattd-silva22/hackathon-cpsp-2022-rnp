@@ -46,5 +46,21 @@ export const VideoControllerContainer = styled.nav`
     .icon {
       background-color: ${({ theme }) => theme.colors.danger};
     }
+
+    @media(max-width:1366px) {
+      & {
+        display: none;
+      }
+    }
+
+  }
+
+  .resp {
+    display: none;
+    @media(max-width:1366px) {
+      & {
+        display: flex;
+      }
+    }
   }
 `;

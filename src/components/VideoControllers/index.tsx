@@ -68,6 +68,14 @@ export default function VideoController() {
 
           <p>Levantar a mão</p>
         </div>
+
+        <div className="menu-item leave-room resp">
+          <p className="icon">
+            <PhoneSlash size={24} color="#fff" />
+          </p>
+
+          <p>Sair da Chamada</p>
+        </div>
       </div>
 
       <div className="menu-item leave-room">

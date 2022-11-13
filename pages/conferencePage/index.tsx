@@ -13,8 +13,11 @@ export default function ConferencePage() {
       <ConferencePageContent>
         <main className="conference-area">
           <BarraAcessibilidade />
-          <VideoContent />
-          <VideoController />
+          <div className="video-area">
+            <VideoContent />
+            <VideoController />
+          </div>
+          
         </main>
         <ChatTab />
       </ConferencePageContent>

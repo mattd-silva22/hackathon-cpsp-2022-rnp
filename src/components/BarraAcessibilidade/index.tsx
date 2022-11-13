@@ -35,9 +35,9 @@ export default function BarraAcessibilidade() {
             className="menu-btn"
             aria-label="Selecione seu tipo de daltonismo"
           >
-            <Eye size={32} />
+            <Eye size={24} />
             <span>Modo daltônico</span>
-            <CaretDown size={32} />
+            <CaretDown size={24} />
           </button>
         </div>
 
@@ -46,33 +46,34 @@ export default function BarraAcessibilidade() {
             className="menu-btn"
             onClick={() => setHighContrast((state) => !state)}
           >
-            <CircleHalf size={32} weight={"fill"} />
+            <CircleHalf size={24} weight={"fill"} />
             <span>Alto contraste</span>
           </button>
         </div>
 
         <div className="menu-li">
-          <nav className="controle-fonte">
             <button
               className="menu-btn"
               onClick={() => {
                 handleChangeFontSize(fontSize, "+");
               }}
             >
-              <Plus size={32} />
+              <Plus size={24} />
               <span>Aumentar letras</span>
             </button>
 
-            <button
+        </div>
+
+        <div className="menu-li">
+        <button
               className="menu-btn"
               onClick={() => {
                 handleChangeFontSize(fontSize, "-");
               }}
             >
-              <Minus size={32} />
+              <Minus size={24} />
               <span>Diminuir letras</span>
             </button>
-          </nav>
         </div>
       </div>
     </BarraAcessibilidadeContainer>

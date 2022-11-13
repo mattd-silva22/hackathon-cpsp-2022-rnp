@@ -40,11 +40,9 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 16px;
 
-  border: 1px solid green;
-
   h1 {
     font-weight: 700;
-    font-size:  3.2rem;
+    font-size: 3.2rem;
     line-height: 52px;
 
     color: ${({ theme }) => theme.colors.black};
@@ -54,7 +52,7 @@ export const Container = styled.div`
     width: 100%;
   }
 
-  .recording-text{
+  .recording-text {
     font-size: 2.4rem;
   }
   .invite-people-text {

@@ -2,18 +2,24 @@ import { createGlobalStyle } from "styled-components";
 
 const styled = { createGlobalStyle };
 
-export const GlobalStyled = styled.createGlobalStyle<{ fontSize: string }>`
+interface GlobalStyledProps {
+  fontSize: string;
+  textColor: string;
+}
+
+export const GlobalStyled = styled.createGlobalStyle<GlobalStyledProps>`
   * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     border: 0px;
 
-    transition: font-size .2s;
+    transition: all 0.2s;
+    font-family: "Open Sans";
+    color: ${({ textColor }) => textColor};
   }
 
   html {
     font-size: ${({ fontSize }) => fontSize};
-    font-family: "Open Sans";
   }
 `;

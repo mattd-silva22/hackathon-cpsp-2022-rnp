@@ -5,7 +5,7 @@ import { Plus } from "phosphor-react";
 const VideoContent: React.FC = () => {
   return (
     <Container>
-      <h1 className="room">Lorem ipsum dolor sit amet consectetur</h1>
+      <h1 className="room">Workshop para hackaton</h1>
 
       {/* <div className="video-container_header">
         <span>
@@ -47,10 +47,10 @@ export const Container = styled.div`
   }
 
   .recording-text {
-    font-size: 2.0rem;
+    font-size: 2rem;
   }
   .invite-people-text {
-    font-size: 2.0rem;
+    font-size: 2rem;
   }
 
   .video-container_header {
@@ -104,7 +104,7 @@ export const Container = styled.div`
     width: 100%;
     height: auto;
     border-radius: 24px;
-    @media(max-width:1366px){
+    @media (max-width: 1366px) {
       width: 100%;
     }
   }

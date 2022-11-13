@@ -1,3 +1,4 @@
+import { PaperPlaneTilt } from "phosphor-react";
 import React, { useState } from "react";
 import styled from "styled-components";
 import Message from "../Message";
@@ -59,7 +60,6 @@ const messages = [
     },
     text: "Professor, pode repetir o último slide?",
   },
- 
 ];
 
 type tabs = "Mensagens" | "Participantes";
@@ -80,6 +80,15 @@ const ChatTab = () => {
           />
         ))}
       </div>
+
+      <div className="input-container">
+        <input placeholder="Digite uma mensagem" />
+        <button>
+          <p>Enviar</p>
+          <PaperPlaneTilt size={20} color={"#fff"} />
+        </button>
+      </div>
+
       <div className="navbar-aside-area">
         <button className={title === "Mensagens" ? "active" : undefined}>
           Participantes
@@ -139,17 +148,62 @@ export const Container = styled.div`
     gap: 12px;
     align-items: flex-start;
     margin-top: 8px;
-    
 
-    
     overflow-y: scroll;
+  }
+
+  .input-container {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+
+    input {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 8px;
+      gap: 8px;
+      flex: 1;
+      width: 100%;
+
+      background: ${({ theme }) => theme.colors.base100};
+
+      border: 1px solid #7e7c8a;
+      border-radius: 8px;
+    }
+
+    button {
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 16px;
+      gap: 8px;
+      cursor: pointer;
+
+      background: ${({ theme }) => theme.colors.info};
+
+      border: 1px solid ${({ theme }) => theme.colors.base200};
+      border-radius: 8px;
+      &:hover {
+        opacity: 0.8;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 32px;
+
+        color: #f4f4f5;
+      }
+    }
   }
 
   .navbar-aside-area {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    
 
     button {
       width: 100%;

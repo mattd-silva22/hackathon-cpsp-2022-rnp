@@ -21,7 +21,7 @@ const VideoContent: React.FC = () => {
         </span>
       </div> */}
 
-      <video autoPlay>
+      <video autoPlay muted loop>
         <source src="videoplayback.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>

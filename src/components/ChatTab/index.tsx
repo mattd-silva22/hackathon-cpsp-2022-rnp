@@ -207,8 +207,6 @@ const ChatTab = () => {
         <button className={title === "Participantes" ? "active" : undefined}>
           Mensagens
         </button>
-
-        <button>Notas de Aulas</button>
       </div>
     </Container>
   );
@@ -265,8 +263,9 @@ export const Container = styled.div`
 
   .navbar-aside-area {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
+    
 
     button {
       width: 100%;

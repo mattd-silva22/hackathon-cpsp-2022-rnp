@@ -1,10 +1,12 @@
 import { createGlobalStyle } from "styled-components";
+import { ColorBlindTypes } from "../components/context/StylesContext";
 
 const styled = { createGlobalStyle };
 
 interface GlobalStyledProps {
   fontSize: string;
   textColor: string;
+  filter: ColorBlindTypes;
 }
 
 export const GlobalStyled = styled.createGlobalStyle<GlobalStyledProps>`
@@ -21,5 +23,10 @@ export const GlobalStyled = styled.createGlobalStyle<GlobalStyledProps>`
 
   html {
     font-size: ${({ fontSize }) => fontSize};
+
+    -webkit-filter: ${({ filter }) =>
+      filter === "none" ? "" : "url(filter.svg#" + filter + ")"};
+    filter: ${({ filter }) =>
+      filter === "none" ? "" : "url(filter.svg#" + filter + ")"};
   }
 `;

@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { CaretDown, CircleHalf, Eye, Minus, Plus } from "phosphor-react";
 import Image from "next/image";
 import { useFontSize } from "../../hooks/useFontSIze";
 import { BarraAcessibilidadeContainer } from "./styles";
 import { useStyles } from "../../hooks/useStyles";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
 export default function BarraAcessibilidade() {
   const { fontSize, setFontSize } = useFontSize();
-  const { highContrast, setHighContrast } = useStyles();
+  const { highContrast, setHighContrast, setColorBlind } = useStyles();
+  const [dropdown, setDropdown] = useState(false);
 
   function handleChangeFontSize(currentFontSize: number, operation: string) {
     if (operation === "-" && currentFontSize > 100) {
@@ -30,14 +30,45 @@ export default function BarraAcessibilidade() {
       />
 
       <div className="menu-ul">
-        <button
-          className="menu-btn"
-          aria-label="Selecione seu tipo de daltonismo"
-        >
-          <Eye size={24} />
-          <span>Modo daltônico</span>
-          <CaretDown size={24} />
-        </button>
+        <div className="dropdown">
+          <button
+            className="menu-btn"
+            aria-label="Selecione seu tipo de daltonismo"
+            onClick={() => setDropdown((state) => !state)}
+          >
+            <Eye size={24} />
+            <span>Modo daltônico</span>
+            <CaretDown size={24} />
+          </button>
+
+          <div className={`dropdown-content ${!dropdown ? "disable" : ""}`}>
+            <button onClick={() => setColorBlind("deuteranomaly")}>
+              Deuteranomalia
+            </button>
+            <button onClick={() => setColorBlind("deuteranopia")}>
+              Deuteranopia
+            </button>
+            <button onClick={() => setColorBlind("protanomaly")}>
+              Protanomalia
+            </button>
+            <button onClick={() => setColorBlind("protanopia")}>
+              Protanopia
+            </button>
+            <button onClick={() => setColorBlind("deuteranomaly")}>
+              Deuteranomalia
+            </button>
+            <button onClick={() => setColorBlind("deuteranopia")}>
+              Deuteranopia
+            </button>
+            <button onClick={() => setColorBlind("Achromatomaly")}>
+              Acrotomalia
+            </button>
+            <button onClick={() => setColorBlind("Achromatopsia")}>
+              Acromatopsia
+            </button>
+            <button onClick={() => setColorBlind("none")}>Nenhum</button>
+          </div>
+        </div>
 
         <button
           className="menu-btn"

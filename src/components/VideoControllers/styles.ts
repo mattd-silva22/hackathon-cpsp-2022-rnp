@@ -15,7 +15,7 @@ export const VideoControllerContainer = styled.nav`
 
   .conference-menu {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(90px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(100px, auto));
     width: 100%;
     grid-gap: 8px;
     align-items: flex-start;

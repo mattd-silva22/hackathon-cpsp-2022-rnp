@@ -8,5 +8,10 @@ export const GlobalStyled = styled.createGlobalStyle`
     padding: 0px;
     box-sizing: border-box;
     border: 0px;
+    
+  }
+
+  html {
+    font-size: 62.5%;
   }
 `;

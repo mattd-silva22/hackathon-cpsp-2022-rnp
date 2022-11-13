@@ -13,27 +13,7 @@ export default function ConferencePage() {
             <main className="conference-area">
 
                 <BarraAcessibilidade/>
-
-                <header className="conference-room-header">
-                    <h1> Lorem ipsum dolor sit amet consectetur| room 312 </h1>
-                </header>
-
-
-                <section className="conference-room-section">
-
-                    <nav className="conferece-room-controller-top">
-                        oi 2 
-                    </nav>
-
-                    <video src="">
-                        video aqui
-                    </video>
-
-                    <nav className='conference-controller-menu'>
-                        oi
-                    </nav>
-
-                </section>
+                <VideoContent />
 
             </main>
 

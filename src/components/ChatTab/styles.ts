@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  
   height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
@@ -10,7 +9,12 @@ export const Container = styled.div`
   background: ${(props) => props.theme.colors.base100};
   border: 1px solid ${(props) => props.theme.colors.base200};
   border-radius: 8px;
-  
+
+  position: sticky;
+  top: 32px;
+  overflow: hidden;
+  min-width: 450px;
+
   .chat-tab_header {
     display: flex;
     flex-direction: column;
@@ -41,7 +45,6 @@ export const Container = styled.div`
     margin-top: 8px;
 
     overflow-y: scroll;
-    
   }
 
   .input-container {
@@ -97,12 +100,9 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: sticky;
-    overflow: hidden;
+    overflow-y: auto;
     width: 100%;
     flex: 1;
-    top: 32px;
-    min-width: 450px;
   }
 
   .content-users {

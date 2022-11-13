@@ -13,16 +13,16 @@ const ChatTab = () => {
     messages.filter((a, index) => index < 3) as typeof messages
   );
 
-  const [currentPage , setCurrentPage] = useState("msg")
-  function handleSwitchPage(page:String){
-    if(page === "msg") {
-      setCurrentPage("msg")
-      setTitle("Mensagens")
+  const [currentPage, setCurrentPage] = useState("msg");
+  function handleSwitchPage(page: String) {
+    if (page === "msg") {
+      setCurrentPage("msg");
+      setTitle("Mensagens");
     }
 
-    if(page === 'users') {
-      setCurrentPage('users')
-      setTitle("Participantes")
+    if (page === "users") {
+      setCurrentPage("users");
+      setTitle("Participantes");
     }
   }
   const addDelayMessage = useCallback(() => {
@@ -45,10 +45,7 @@ const ChatTab = () => {
   return (
     <Container>
       <div className="chat-tab_header">{title}</div>
-      {currentPage === 'msg'? 
-      
-      
-      
+      {currentPage === "msg" ? (
         <div className="content-msg">
           <div className="message-container">
             {arrMessages.map((message, index) => (
@@ -69,31 +66,21 @@ const ChatTab = () => {
             </button>
           </div>
         </div>
-      
-      
-      : 
-      
-      
-      <div className="content-users">
-        oi
-      </div>
-      
-      
-      }
-      
-      
+      ) : (
+        <div className="content-users">oi</div>
+      )}
 
       <div className="navbar-aside-area">
         <button
           className={title === "Mensagens" ? "active" : undefined}
-          onClick={() => handleSwitchPage('msg')}
+          onClick={() => handleSwitchPage("msg")}
         >
           Mensagens
         </button>
 
         <button
           className={title === "Participantes" ? "active" : undefined}
-          onClick={() => handleSwitchPage('users')}
+          onClick={() => handleSwitchPage("users")}
         >
           Participantes
         </button>

@@ -7,6 +7,7 @@ import {
   PhoneSlash,
   TextAa,
   VideoCamera,
+  VideoCameraSlash,
 } from "phosphor-react";
 import React, { useState } from "react";
 import { useStyles } from "../../hooks/useStyles";
@@ -16,51 +17,67 @@ export default function VideoController() {
   const { highContrast } = useStyles();
   const [isMicActive,setIsMicAcitve] = useState(false)
 
+  const [isCameraActive,setIsCameraActive] = useState(false)
+
+  const [isHandUp, setIsHandUp] = useState(false)
+
   function handleActiveMicBtnClick() {
     setIsMicAcitve(!isMicActive)
   }
+
+  function handleActiveCameraBtnClick() {
+    setIsCameraActive(!isCameraActive)
+  }
+
+  function handleHandUpBtnClick() {
+    setIsHandUp(!isHandUp)
+  }
+
   return (
     <VideoControllerContainer>
       <div className="conference-menu">
-        <div className={`menu-item`} onClick={handleActiveMicBtnClick}>
+        <button className={`menu-item`} onClick={handleActiveMicBtnClick}>
           <p className={` icon ${isMicActive? "mic-on" : "mic-off"}`}>
             {isMicActive?  
-              <Microphone size={24} color={highContrast ? "#fff" : "#000"} /> 
+              <Microphone size={24} color={highContrast || isMicActive ? "#fff" : "#000"} /> 
               : 
-              <MicrophoneSlash size={24} color={ highContrast || isMicActive  ? "#fff" : "#000"}/>
+              <MicrophoneSlash size={24} color={ highContrast   ? "#fff" : "#000"}/>
             }
 
             
           </p>
 
           <p>Microfone</p>
-        </div>
+        </button>
 
-        <div className="menu-item">
-          <p className="icon">
-            <VideoCamera size={24} color={highContrast ? "#fff" : "#000"} />
+        <button className="menu-item" onClick={handleActiveCameraBtnClick}>
+          <p className={` icon ${isCameraActive? "cam-on" : "cam-off"}`}>
+            {isCameraActive? <VideoCamera size={24} color={highContrast || isCameraActive ? "#fff" : "#000"} />  
+              :  
+              <VideoCameraSlash size={24} color={highContrast ? "#fff" : "#000"} />  }
+            
           </p>
 
           <p>Câmera</p>
-        </div>
+        </button>
 
-        <div className="menu-item">
+        <button className="menu-item">
           <p className="icon">
             <TextAa size={24} color={highContrast ? "#fff" : "#000"} />
           </p>
 
           <p>Legendas</p>
-        </div>
+        </button>
 
-        <div className="menu-item">
+        <button className="menu-item">
           <p className="icon">
             <CornersOut size={24} color={highContrast ? "#fff" : "#000"} />
           </p>
 
           <p>Tela Cheia</p>
-        </div>
+        </button>
 
-        <div className="menu-item">
+        <button className="menu-item">
           <p className="icon">
             <Monitor
               size={24}
@@ -70,32 +87,32 @@ export default function VideoController() {
           </p>
 
           <p>Apresentar</p>
-        </div>
+        </button>
 
-        <div className="menu-item">
-          <p className="icon">
-            <HandPalm size={24} color={highContrast ? "#fff" : "#000"} />
+        <button className="menu-item" onClick={handleHandUpBtnClick}>
+          <p className={` icon ${isHandUp? "hand-on" : "hand-off"}`}>
+            <HandPalm size={24} color={highContrast || isHandUp ? "#fff" : "#000"} />
           </p>
 
-          <p>Levantar a mão</p>
-        </div>
+          <p> {isHandUp? "Abaixar a mão" : "Levantar a mão"}</p>
+        </button>
 
-        <div className="menu-item leave-room resp">
+        <button className="menu-item leave-room resp">
           <p className="icon">
             <PhoneSlash size={24} color="#fff" />
           </p>
 
           <p>Sair da Chamada</p>
-        </div>
+        </button>
       </div>
 
-      <div className="menu-item leave-room">
+      <button className="menu-item leave-room">
         <p className="icon">
           <PhoneSlash size={24} color="#fff" />
         </p>
 
         <p>Sair da Chamada</p>
-      </div>
+      </button>
     </VideoControllerContainer>
   );
 }

@@ -60,8 +60,20 @@ export const VideoControllerContainer = styled.nav`
       }
     }
   }
+
+  button {
+    background: none;
+  }
   .mic-on {
-    background-color: ${({ theme }) => theme.colors. success};
+    background-color: ${({ theme }) => theme.colors.success};
+  }
+
+  .cam-on {
+    background-color: ${({ theme }) => theme.colors.success};
+  }
+
+  .hand-on {
+    background-color: ${({theme}) => theme.colors.warning};
   }
 
   .resp {

@@ -14,9 +14,9 @@ const VideoContent: React.FC = () => {
             <p>Recording 00:00:00</p>
           </span>
 
-          <span>
+          <span className="invite-people">
             <div className="add-icon">
-              <Plus size={20} />
+              <Plus size={24} color={"#ffffff"} />
             </div>
             <p>Convidar pessoas</p>
           </span>
@@ -36,12 +36,16 @@ export default VideoContent;
 export const Container = styled.div`
   width: 100%;
 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
   h1 {
     font-weight: 700;
     font-size: 34px;
     line-height: 52px;
 
-    color: #2f2e33;
+    color: ${({ theme }) => theme.colors.black};
   }
 
   .video-page_container {
@@ -56,18 +60,41 @@ export const Container = styled.div`
       .recording-icon {
         width: 32px;
         height: 32px;
-        background: #f4f4f5;
+        background: ${({ theme }) => theme.colors.base150};
 
-        border: 9px solid #e23645;
+        border: 9px solid ${({ theme }) => theme.colors.danger};
+        border-radius: 100%;
+      }
+
+      .add-icon {
+        width: 32px;
+        height: 32px;
+
+        background: ${({ theme }) => theme.colors.success};
+        border-radius: 8px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       display: flex;
+      align-items: center;
       gap: 8px;
+
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 32px;
+
+      &.invite-people {
+        color: ${({ theme }) => theme.colors.success};
+      }
     }
   }
 
   video {
     width: 100%;
     height: auto;
+    border-radius: 24px;
   }
 `;

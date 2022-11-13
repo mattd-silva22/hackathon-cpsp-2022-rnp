@@ -5,8 +5,16 @@ import { ThemeProvider, ThemeProps } from "styled-components";
 
 const AppProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
   const theme = {
-    font: {
-      size: 16,
+    font: {},
+    colors: {
+      base150: "#F4F4F5",
+      base200: "#E2E1E6",
+      base100: "#ffffff",
+      danger: "#e23645",
+      success: "#008F66",
+      warning: "#EDB507",
+      info: "#0061EA",
+      black: "#2f2e33",
     },
   };
 

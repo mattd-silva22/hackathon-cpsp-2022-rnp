@@ -1,59 +1,89 @@
-import {  CornersOut, HandPalm, Microphone, Monitor, TextAa, VideoCamera } from 'phosphor-react'
+import {  CornersOut, HandPalm, Microphone, Monitor, PhoneSlash, TextAa, VideoCamera } from 'phosphor-react'
 import React from 'react'
 import { VideoControllerContainer } from './styles'
 
 export default function VideoController() {
   return (
     <VideoControllerContainer>
-        <ul>
+        <ul className='conference-menu'>
             <li className='menu-item'>
-                <Microphone size={32} color="#000" />
+                <p className="icon">
+                    <Microphone size={24} color="#000" />
+                </p>
+                
 
-                <span>
+                <p>
                     Microfone 
-                </span>
+                </p>
             </li>
 
             <li className='menu-item'>
-                <VideoCamera size={32} color="#000" />
+                <p className="icon">
+                    <VideoCamera size={24} color="#000" /> 
+                </p>
+                
 
-                <span>
+                <p>
                     Câmera
-                </span>
+                </p>
             </li>
 
             <li className='menu-item'>
-                <TextAa size={32} color="#000" />
+                <p className="icon">
+                    <TextAa size={24} color="#000" />
+                </p>
+                
 
-                <span>
+                <p>
                     Legendas
-                </span>
+                </p>
             </li>
 
             <li className='menu-item'>
-                <CornersOut size={32} color="#000" />
+                <p className="icon">
+                    <CornersOut size={24} color="#000" />
+                </p>
+                
 
-                <span>
+                <p>
                     Tela Cheia
-                </span>
+                </p>
             </li>
 
             <li className='menu-item'>
-                <Monitor size={32} color="#000" />
+                <p className="icon">
+                    <Monitor size={24} color="#000" weight='bold'/>
+                </p>
+                
 
-                <span>
+                <p>
                     Apresentar
-                </span>
+                </p>
             </li>
 
             <li className='menu-item'>
-                <HandPalm size={32} color="#000" />
+                <p className="icon">
+                    <HandPalm size={24} color="#000" />
+                </p>
+                
 
-                <span>
+                <p>
                     Levantar a mão
-                </span>
+                </p>
             </li>
         </ul>
+
+        <div className='menu-item leave-room'>
+            <p className="icon">
+                <PhoneSlash size={24} color="#fff" />         
+            </p>
+            
+
+            <p>
+                Sair da Chamada
+            </p> 
+        </div>
+        
     </VideoControllerContainer>
   )
 }

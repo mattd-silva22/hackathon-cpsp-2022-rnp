@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Message from "../Message";
 
+interface IChatTabProps {
+  title: string
+}
 const messages = [
   {
     user: {
@@ -181,10 +184,10 @@ const messages = [
   },
 ];
 
-const ChatTab: React.FC = () => {
+const ChatTab = (props:IChatTabProps) => {
   return (
     <Container>
-      <div className="chat-tab_header">Mensagens na chamada</div>
+      <div className="chat-tab_header">{props.title}</div>
       <div className="message-container">
         {messages.map((message) => (
           <Message
@@ -206,8 +209,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0px;
-  border: 1px solid #e2e1e6;
-  border-radius: 8px;
+  
 
   min-width: 523px;
   height: 1016px;

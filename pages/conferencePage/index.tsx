@@ -6,6 +6,7 @@ import BarraAcessibilidade from "../../src/components/BarraAcessibilidade";
 import ChatTab from "../../src/components/ChatTab";
 import { ConferencePageContainer, ConferencePageContent } from "./styles";
 import VideoController from "../../src/components/VideoControllers";
+import AsideArea from "../../src/components/AsideArea";
 
 export default function ConferencePage() {
   return (
@@ -17,9 +18,7 @@ export default function ConferencePage() {
             <VideoContent />
             <VideoController/>
           </main>
-          <section className="aside-area">
-            <ChatTab />
-          </section>
+          <AsideArea/>
       </ConferencePageContent>
     </ConferencePageContainer>
   );

@@ -34,6 +34,7 @@ export const BarraAcessibilidadeContainer = styled.nav`
   }
 
   .menu-btn {
+    width: 100%;
     padding: 8px 16px;
     display: flex;
     align-items: center;
@@ -58,6 +59,45 @@ export const BarraAcessibilidadeContainer = styled.nav`
 
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    position: absolute;
+
+    bottom: -450px;
+    left: 0;
+    z-index: 99;
+
+    background-color: ${(props) => props.theme.colors.base200};
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    width: 100%;
+
+    border-radius: 8px;
+    overflow: hidden;
+
+    &.disable {
+      display: none;
+    }
+
+    button {
+      padding: 8px;
+      background-color: ${(props) => props.theme.colors.base100};
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 32px;
+      color: ${(props) => props.theme.colors.black};
+      cursor: pointer;
+
+      &:hover {
+        background-color: ${(props) => props.theme.colors.base200};
+      }
     }
   }
 `;

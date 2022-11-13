@@ -55,5 +55,7 @@ export const Container = styled.div`
 
     background: ${({ theme }) => theme.colors.base150};
     border-radius: 8px;
+
+    font-size: 1.2rem;
   }
 `;

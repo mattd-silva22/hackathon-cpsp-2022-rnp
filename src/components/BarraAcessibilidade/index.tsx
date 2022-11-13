@@ -30,51 +30,42 @@ export default function BarraAcessibilidade() {
       />
 
       <div className="menu-ul">
-        <div className="menu-li">
-          <button
-            className="menu-btn"
-            aria-label="Selecione seu tipo de daltonismo"
-          >
-            <Eye size={24} />
-            <span>Modo daltônico</span>
-            <CaretDown size={24} />
-          </button>
-        </div>
-
-        <div className="menu-li">
-          <button
-            className="menu-btn"
-            onClick={() => setHighContrast((state) => !state)}
-          >
-            <CircleHalf size={24} weight={"fill"} />
-            <span>Alto contraste</span>
-          </button>
-        </div>
-
-        <div className="menu-li">
-            <button
-              className="menu-btn"
-              onClick={() => {
-                handleChangeFontSize(fontSize, "+");
-              }}
-            >
-              <Plus size={24} />
-              <span>Aumentar letras</span>
-            </button>
-
-        </div>
-
-        <div className="menu-li">
         <button
-              className="menu-btn"
-              onClick={() => {
-                handleChangeFontSize(fontSize, "-");
-              }}
-            >
-              <Minus size={24} />
-              <span>Diminuir letras</span>
-            </button>
-        </div>
+          className="menu-btn"
+          aria-label="Selecione seu tipo de daltonismo"
+        >
+          <Eye size={24} />
+          <span>Modo daltônico</span>
+          <CaretDown size={24} />
+        </button>
+
+        <button
+          className="menu-btn"
+          onClick={() => setHighContrast((state) => !state)}
+        >
+          <CircleHalf size={24} weight={"fill"} />
+          <span>Alto contraste</span>
+        </button>
+
+        <button
+          className="menu-btn"
+          onClick={() => {
+            handleChangeFontSize(fontSize, "+");
+          }}
+        >
+          <Plus size={24} />
+          <span>Aumentar letras</span>
+        </button>
+
+        <button
+          className="menu-btn"
+          onClick={() => {
+            handleChangeFontSize(fontSize, "-");
+          }}
+        >
+          <Minus size={24} />
+          <span>Diminuir letras</span>
+        </button>
       </div>
     </BarraAcessibilidadeContainer>
   );

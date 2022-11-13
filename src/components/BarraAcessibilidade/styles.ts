@@ -9,8 +9,8 @@ export const BarraAcessibilidadeContainer = styled.nav`
   flex-wrap: wrap;
   gap: 16px;
 
-  @media(max-width:1366px) {
-    &{
+  @media (max-width: 1366px) {
+    & {
       flex-direction: column;
     }
   }
@@ -21,15 +21,17 @@ export const BarraAcessibilidadeContainer = styled.nav`
     justify-content: flex-start;
     gap: 8px;
     flex-wrap: wrap;
-  
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 100%;
   }
+
   .menu-li {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-
- 
 
   .menu-btn {
     padding: 8px 16px;
@@ -47,8 +49,8 @@ export const BarraAcessibilidadeContainer = styled.nav`
     line-height: 3.2rem;
     font-size: 1.4rem;
 
-    @media(max-width:1366px) {
-      &{
+    @media (max-width: 1366px) {
+      & {
         font-size: 1rem;
         padding: 4px 8px;
       }

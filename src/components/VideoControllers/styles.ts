@@ -7,19 +7,18 @@ export const VideoControllerContainer = styled.nav`
   width: 100%;
   gap: 16px;
 
-
-  @media(max-width:1366px) {
-      & {
-        justify-content: center;
-      }
+  @media (max-width: 1366px) {
+    & {
+      justify-content: center;
     }
+  }
 
   .conference-menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 16px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, auto));
+    width: 100%;
+    grid-gap: 8px;
+    align-items: flex-start;
   }
 
   .menu-item {
@@ -44,7 +43,8 @@ export const VideoControllerContainer = styled.nav`
 
     p {
       font-size: 1.4rem;
-      white-space: nowrap;
+      /* white-space: nowrap; */
+      text-align: center;
       font-weight: 600;
     }
   }
@@ -54,17 +54,16 @@ export const VideoControllerContainer = styled.nav`
       background-color: ${({ theme }) => theme.colors.danger};
     }
 
-    @media(max-width:1366px) {
+    @media (max-width: 1366px) {
       & {
         display: none;
       }
     }
-
   }
 
   .resp {
     display: none;
-    @media(max-width:1366px) {
+    @media (max-width: 1366px) {
       & {
         display: flex;
       }

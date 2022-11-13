@@ -87,11 +87,15 @@ export const Container = styled.div`
       gap: 8px;
 
       font-weight: 400;
-      font-size: 24px;
       line-height: 32px;
+      p {
+        font-size: 1.6rem;
+      }
 
       &.invite-people {
-        color: ${({ theme }) => theme.colors.success};
+        p {
+          color: ${({ theme }) => theme.colors.success};
+        }
       }
     }
   }

@@ -8,7 +8,5 @@ export default function Home() {
   //   <button onClick={() => speak({ text: "Quero pizza!!!!!" })}>Speak</button>
   // );
 
-  return ( 
-    ConferencePage()
-  )
+  return <ConferencePage />;
 }

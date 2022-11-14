@@ -1,7 +1,9 @@
 import { PaperPlaneTilt } from "phosphor-react";
 import React, { memo, useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
+import { useUsers } from "../../hooks/useUsers";
 import Message from "../Message";
+import UserCards from "../UserCard";
 import { messages } from "./mock-messages";
 import { Container } from "./styles";
 
@@ -13,11 +15,14 @@ const ChatTab = () => {
     messages.filter((a, index) => index < 3) as typeof messages
   );
 
-  const [currentPage, setCurrentPage] = useState("msg");
-  function handleSwitchPage(page: String) {
-    if (page === "msg") {
-      setCurrentPage("msg");
-      setTitle("Mensagens");
+  const [currentPage , setCurrentPage] = useState("msg")
+
+  const { getUsers } = useUsers()
+  const userList = getUsers()
+  function handleSwitchPage(page:String){
+    if(page === "msg") {
+      setCurrentPage("msg")
+      setTitle("Mensagens")
     }
 
     if (page === "users") {
@@ -66,9 +71,19 @@ const ChatTab = () => {
             </button>
           </div>
         </div>
-      ) : (
-        <div className="content-users">oi</div>
-      )}
+      
+      )
+              
+      : 
+              
+      <div className="content-users">
+        {userList.map(item => <UserCards key={item.id} email={item.email} name={item.username}  id={item.id} img={item.avatarImg}/>)}
+      </div>
+      
+      
+      }
+      
+      
 
       <div className="navbar-aside-area">
         <button

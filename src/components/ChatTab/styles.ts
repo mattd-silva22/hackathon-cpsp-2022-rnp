@@ -107,8 +107,8 @@ export const Container = styled.div`
 
   .content-users {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     flex-direction: column;
     position: sticky;
     overflow: hidden;
@@ -116,6 +116,8 @@ export const Container = styled.div`
     flex: 1;
     top: 32px;
     min-width: 450px;
+    padding: 32px 16px;
+    gap: 16px;
   }
 
   .navbar-aside-area {

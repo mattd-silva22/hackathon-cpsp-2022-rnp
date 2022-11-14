@@ -6,9 +6,10 @@ import React from "react";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: url("/home-background.webp");
+  /* background: url("/home-background.webp");
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background: #1A3C8A;
   display: flex;
   align-items: center;
   justify-content: center;

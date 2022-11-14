@@ -10,7 +10,16 @@ export const userListMockData:IUserData[] = [
         accessibilityUser: false,
         description: "adfgh"
     },
-    {
+    {   
+        id : nanoid(6),
+        username: "Carlos Peixoto",
+        avatarImg : "https://images.rtl.fr/~c/770v513/rtl/www/1446418-travis-bickle-robert-de-niro-dans-taxi-driver.jpg",
+        email : "peixoto.carlos@email.com",
+        type:"admin",
+        accessibilityUser: false,
+        description: "adfgh"
+    },
+    { 
         id: nanoid(6),
         username: "Maria Fernandes",
         avatarImg : "https://images.mubicdn.net/images/cast_member/170617/cache-174245-1659464131/image-w856.jpg?size=800x",
@@ -26,6 +35,17 @@ export const userListMockData:IUserData[] = [
         username: "Guto Marcelo",
         avatarImg : "https://classic.exame.com/wp-content/uploads/2021/03/Irmao-Lazaro.jpg?quality=70&strip=info&w=718",
         email : "guto.marcelo@email.com",
+        type : "user",
+        accessibilityUser: true,
+        description: ""
+
+    },
+
+    {
+        id: nanoid(6),
+        username: "Kira Santana",
+        avatarImg : "https://i.pinimg.com/736x/69/81/0f/69810fe081bc7f91fc30b9e4474f93fd.jpg",
+        email : "kira.santos@email.com",
         type : "user",
         accessibilityUser: true,
         description: ""

@@ -18,7 +18,8 @@ export const ConferencePageContainer = styled.div`
 
 export const ConferencePageContent = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
   width: 100%;
   max-width: 100%;

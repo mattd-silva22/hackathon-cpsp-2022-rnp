@@ -29,7 +29,7 @@ export default function BarraAcessibilidade() {
         height={48}
       />
 
-      <div className="menu-ul">
+      <div className="menu-ul daltonico">
         <div className="dropdown">
           <button
             className="menu-btn"

@@ -1,12 +1,6 @@
-//import { useSpeechSynthesis } from "react-speech-kit";
-import ConferencePage from "./conferencePage";
+import react from "react";
+import HomePage from "./HomePage";
 
 export default function Home() {
-  // const { speak } = useSpeechSynthesis();
-
-  // return (
-  //   <button onClick={() => speak({ text: "Quero pizza!!!!!" })}>Speak</button>
-  // );
-
-  return <ConferencePage />;
+  return <HomePage />;
 }

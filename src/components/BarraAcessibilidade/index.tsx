@@ -37,7 +37,7 @@ export default function BarraAcessibilidade() {
             onClick={() => setDropdown((state) => !state)}
           >
             <Eye size={24} />
-            <span>Modo daltônico</span>
+            <p>Modo daltônico</p>
             <CaretDown
               size={24}
               style={{
@@ -131,7 +131,7 @@ export default function BarraAcessibilidade() {
           }}
         >
           <CircleHalf size={24} weight={"fill"} />
-          <span>Alto contraste</span>
+          <p>Alto contraste</p>
         </button>
 
         <button
@@ -142,7 +142,7 @@ export default function BarraAcessibilidade() {
           }}
         >
           <Plus size={24} />
-          <span>Aumentar letras</span>
+          <p>Aumentar letras</p>
         </button>
 
         <button
@@ -152,7 +152,7 @@ export default function BarraAcessibilidade() {
           }}
         >
           <Minus size={24} />
-          <span>Diminuir letras</span>
+          <p>Diminuir letras</p>
         </button>
       </div>
     </BarraAcessibilidadeContainer>

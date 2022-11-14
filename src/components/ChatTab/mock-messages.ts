@@ -18,8 +18,8 @@ export const messages = [
   {
     user: {
       id: 3,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
+      name: "Maria",
+      img: "https://images.mubicdn.net/images/cast_member/170617/cache-174245-1659464131/image-w856.jpg?size=800x",
     },
     text: "Professor, poderia enviar o arquivo pelo email da turma?",
   },
@@ -50,8 +50,8 @@ export const messages = [
   {
     user: {
       id: 7,
-      name: "Ana",
-      img: "https://images.unsplash.com/photo-1492633423870-43d1cd2775eb?&w=128&h=128&dpr=2&q=80",
+      name: "Maria",
+      img: "https://images.mubicdn.net/images/cast_member/170617/cache-174245-1659464131/image-w856.jpg?size=800x",
     },
     text: "Professor, pode repetir o último slide?",
   },

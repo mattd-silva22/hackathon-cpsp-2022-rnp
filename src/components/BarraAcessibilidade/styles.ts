@@ -4,7 +4,6 @@ export const BarraAcessibilidadeContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  /* border: 1px solid red; */
   color: ${({ theme }) => theme.colors.black};
   flex-wrap: wrap;
   gap: 16px;
@@ -16,21 +15,10 @@ export const BarraAcessibilidadeContainer = styled.nav`
   }
 
   .menu-ul {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 8px;
-    flex-wrap: wrap;
-
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     width: 100%;
-  }
-
-  .menu-li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    grid-gap: 8px;
   }
 
   .menu-btn {
@@ -44,11 +32,18 @@ export const BarraAcessibilidadeContainer = styled.nav`
 
     border: 1px solid ${(props) => props.theme.colors.base200};
     border-radius: 8px;
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 600;
-    line-height: 3.2rem;
-    font-size: 1.4rem;
+
+    .icons {
+      width: 24px;
+    }
+
+    p {
+      white-space: nowrap;
+
+      font-weight: 600;
+      line-height: 3.2rem;
+      font-size: 1.4rem;
+    }
 
     @media (max-width: 1366px) {
       & {
